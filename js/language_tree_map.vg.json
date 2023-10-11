@@ -1,11 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 520,
-  "height": 410,
+  "height": 460,
   "padding": 5,
   "title": {
-    "text": "Percentage of World Speakers for Most Spoken Languages",
-    "font": "Tahoma"
+    "text": "Figure 4. Percentage of World Speakers for Most Spoken Languages",
+    "font": "Tahoma",
+    "fontSize": 15
   },
   "data": [
     {
@@ -284,11 +285,7 @@
         "enter": {
           "fill": { "scale": "color", "field": "language" },
           "tooltip": {
-            "field": "language",
-            "title": "Language",
-            "type": "nominal",
-            "font": "Tahoma",
-            "fontSize": 50
+            "field": "language"
           }
         },
         "update": {
@@ -315,7 +312,10 @@
           },
           "align": { "value": "center" },
           "fill": { "value": "#000" },
-          "text": { "field": "percentage" }
+          "text": { "field": "percentage" },
+          "tooltip": {
+            "field": "language"
+          }
         },
         "update": {
           "x": { "signal": "0.5 * (datum.x0 + datum.x1)" },

@@ -1,10 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 350,
+  "width": 800,
+  "height": 500,
   "title": {
-    "text": "Established vs. Immigrant Languages in Countries",
-    "font": "Tahoma"
+    "text": "Figure 2. Established vs. Immigrant Languages in Countries",
+    "font": "Tahoma",
+    "fontSize": 15
   },
   "data": {
     "url": "data/Assignment 2 Data.csv"
@@ -157,6 +158,7 @@
           },
           {
             "field": "Number of Speakers Split per Language",
+            "title": "Speakers per Language",
             "type": "quantitative",
             "format": ".1f"
           }

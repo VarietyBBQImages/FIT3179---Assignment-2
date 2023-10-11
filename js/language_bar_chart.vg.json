@@ -1,10 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 480,
-  "height": 350,
+  "width": 550,
+  "height": 400,
   "title": {
-    "text": "Most Widely Spoken Languages Around the World",
-    "font": "Tahoma"
+    "text": "Figure 3. Most Widely Spoken Languages Around the World",
+    "font": "Tahoma",
+    "fontSize": 15
   },
   "config": {
     "legend": { "titleFont": "Tahoma", "labelFont": "Tahoma" }
@@ -38,7 +39,7 @@
           { "field": "TopLanguages", "title": "Language", "type": "nominal" },
           {
             "field": "NumberCountries",
-            "title": "Number of Countries Language Spoken",
+            "title": "Countries Language Spoken",
             "type": "quantitative"
           }
         ]
@@ -89,7 +90,7 @@
           { "field": "TopLanguages", "title": "Language", "type": "nominal" },
           {
             "field": "TopTotalSpeakers",
-            "title": "Total Number of Speakers (Millions)",
+            "title": "Number Speakers (Millions)",
             "type": "quantitative"
           }
         ]

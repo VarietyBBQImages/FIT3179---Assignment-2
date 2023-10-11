@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Origins of Languages Around the World",
-    "font": "Tahoma"
+    "text": "Figure 1. Origins of Languages Around the World",
+    "font": "Tahoma",
+    "fontSize": 15
   },
   "config": { "legend": { "titleFont": "Tahoma" } },
   "width": 1180,
@@ -13,6 +14,23 @@
     "format": { "type": "topojson", "feature": "ne_110m_admin_0_countries" }
   },
   "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+        "format": { "type": "topojson", "feature": "oceans" }
+      },
+      "mark": { "type": "geoshape", "fill": "lightgray" }
+    },
+    {
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "as": "note"
+        }
+      ],
+      "mark": { "type": "geoshape", "fill": "white", "stroke": "darkgray" },
+      "encoding": { "tooltip": { "field": "note" } }
+    },
     {
       "transform": [
         {
@@ -25,9 +43,10 @@
             "fields": ["Count", "Diversity"]
           }
         },
-        { "calculate": "datum.Diversity", "as": "Diversity Index" }
+        { "calculate": "datum.Diversity", "as": "Diversity Index" },
+        { "calculate": "datum.Count", "as": "Number of Languages" }
       ],
-      "mark": { "type": "geoshape" },
+      "mark": { "type": "geoshape", "stroke": "darkgray" },
       "encoding": {
         "color": {
           "field": "Diversity Index",
@@ -44,7 +63,8 @@
             "type": "nominal",
             "title": "Country"
           },
-          { "field": "Diversity Index", "type": "quantitative" }
+          { "field": "Diversity Index", "type": "quantitative" },
+          { "field": "Number of Languages", "type": "quantitative" }
         ]
       }
     },
@@ -57,9 +77,10 @@
               "url": "data/Assignment 2 Data.csv"
             },
             "key": "Country",
-            "fields": ["Count", "Latitude", "Longitude"]
+            "fields": ["Count", "Latitude", "Longitude", "Diversity"]
           }
         },
+        { "calculate": "datum.Diversity", "as": "Diversity Index" },
         { "calculate": "datum.Count", "as": "Number of Languages" }
       ],
       "mark": { "type": "circle" },
@@ -80,6 +101,7 @@
             "type": "nominal",
             "title": "Country"
           },
+          { "field": "Diversity Index", "type": "quantitative" },
           { "field": "Number of Languages", "type": "quantitative" }
         ]
       }

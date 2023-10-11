@@ -1,7 +1,7 @@
 h1 {
   text-align: center;
   font: 60px Monaco, sans-serif;
-  color: #3e424b;
+  color: white;
 }
 
 body {
@@ -10,17 +10,16 @@ body {
 
 .page {
   width: 1350px;
-  background-color: white;
-  background-image: url("Vis Background.jpg");
+  background-color: lightgray;
   margin: auto;
   padding: 50px;
   padding-top: 35px;
 }
 
 .bar-vis-container {
-  width: 125%;
+  width: 140%;
   border-style: solid;
-  border-color: #3e424b;
+  border-color: darkgray;
   border-width: 5px;
   background-color: white;
 }
@@ -28,15 +27,15 @@ body {
 .tree-vis-container {
   width: 100%;
   border-style: solid;
-  border-color: #3e424b;
+  border-color: darkgray;
   border-width: 5px;
   background-color: white;
 }
 
 .bubble-vis-container {
-  width: 100%;
+  width: 125%;
   border-style: solid;
-  border-color: #3e424b;
+  border-color: darkgray;
   border-width: 5px;
   background-color: white;
 }
@@ -44,7 +43,7 @@ body {
 .map-vis-container {
   width: 100%;
   border-style: solid;
-  border-color: #3e424b;
+  border-color: darkgray;
   border-width: 5px;
   margin-bottom: 40px;
   background-color: white;
@@ -53,7 +52,7 @@ body {
 .text-container {
   width: 100%;
   border-style: solid;
-  border-color: #3e424b;
+  border-color: darkgray;
   border-width: 5px;
   text-align: center;
   font: 15px Tahoma, sans-serif;
