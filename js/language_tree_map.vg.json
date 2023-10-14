@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 520,
-  "height": 460,
+  "width": 350,
+  "height": 405,
   "padding": 5,
   "title": {
-    "text": "Figure 4. Percentage of World Speakers for Most Spoken Languages",
+    "text": "Figure 4. Percentages for Most Widely Spoken Languages",
     "font": "Tahoma",
-    "fontSize": 15
+    "fontSize": 13
   },
   "data": [
     {

@@ -17,7 +17,7 @@ body {
 }
 
 .bar-vis-container {
-  width: 140%;
+  width: 100%;
   border-style: solid;
   border-color: darkgray;
   border-width: 5px;
@@ -59,13 +59,8 @@ body {
   background-color: white;
 }
 
-.description h2,
-h1 {
-  margin-top: 0px;
-}
-
-.description-right {
-  padding-left: 20px;
+.description-left {
+  padding-left: 258px;
 }
 
 .pure-g {
@@ -73,11 +68,5 @@ h1 {
 }
 
 .small-font {
-  font-size: 14px;
-}
-
-.title-font {
-  padding-left: 175px;
-  font: "Comic Sans";
-  font-size: 30px;
+  font: 14px Tahoma, sans-serif;
 }
